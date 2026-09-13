@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>来和米蛋儿公主约会吧 ♡</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="app" class="app">
+      <section id="startScreen" class="start-screen">
+        <img class="start-art" src="assets/images/9）首页标题图.png" alt="米蛋儿公主约会主视觉" />
+        <div class="start-copy">
+          <p class="identity">今日身份：米蛋儿公主头号小宝贝候选人</p>
+          <h1>来和米蛋儿公主约会吧 ♡</h1>
+          <p>今天，<br />米蛋儿公主愿意赏脸和你喝一杯奶茶。</p>
+          <p>这不是普通约会。<br />这是一次关于记忆力、观察力和求生欲的综合考试。</p>
+          <small>温馨提示：米蛋儿公主永远不会错。如果出现问题，请先检查自己。</small>
+          <button id="startBtn" class="primary-btn">♡ 开始约会</button>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="game-screen hidden">
+        <div id="sceneBg" class="scene-bg"></div>
+        <div class="sparkles" aria-hidden="true"></div>
+
+        <header class="hud">
+          <div class="meter">
+            <div class="meter-label"><span>👑 公主心情</span><strong id="moodText">50</strong></div>
+            <div class="meter-track"><span id="moodBar"></span></div>
+          </div>
+          <div class="meter">
+            <div class="meter-label"><span>💗 心动值</span><strong id="heartText">20</strong></div>
+            <div class="meter-track"><span id="heartBar"></span></div>
+          </div>
+        </header>
+
+        <div class="stage">
+          <button id="characterBtn" class="character-btn" aria-label="点击米蛋儿公主">
+            <img id="character" src="assets/images/1）米蛋儿公主默认立绘.png" alt="米蛋儿公主" />
+          </button>
+
+          <section class="dialog-panel">
+            <div id="speaker" class="speaker">系统</div>
+            <div id="dialogText" class="dialog-text"></div>
+            <div id="options" class="options"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="resultScreen" class="result-screen hidden">
+        <div class="result-bg"></div>
+        <article class="result-card">
+          <p class="result-kicker">♡ 米蛋儿公主约会成绩单 ♡</p>
+          <h2 id="endingRank"></h2>
+          <h3 id="endingTitle"></h3>
+          <div id="endingStory" class="ending-story"></div>
+          <div class="score-box">
+            <p>本次结局：<strong id="endingName"></strong></p>
+            <p>👑 公主心情：<strong id="finalMood"></strong> / 100</p>
+            <p>💗 心动值：<strong id="finalHeart"></strong> / 100</p>
+          </div>
+          <p id="princessReview" class="review"></p>
+          <p>今日身份认证：<strong id="finalIdentity"></strong></p>
+          <button id="restartBtn" class="primary-btn">♡ 再陪米蛋儿公主约会一次</button>
+        </article>
+      </section>
+    </main>
+
+    <div id="floatLayer" class="float-layer" aria-hidden="true"></div>
+    <script src="game.js"></script>
+  </body>
+</html>
